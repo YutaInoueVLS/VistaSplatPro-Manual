@@ -1,0 +1,89 @@
+site_name: Vista Splat Proマニュアル
+site_url: https://VIRTUAL-LINE-STUDIOS.github.io/VistaSplatPro-Manual/
+site_author: VIRTUAL LINE STUDIOS Corporation
+site_description: Official documentation of Vista Splat Pro for Unreal Engine.
+copyright: Copyright &copy; 2023 Akiya Research Institute, Inc. All Rights Reserved
+
+site_dir: ../docs/ja
+
+extra_css:
+  - stylesheets/extra.css
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - scheme: slate 
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)" 
+      scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)" 
+      scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+  # font:
+  #   text: M PLUS 1
+  #   code: M PLUS 1 Code
+  language: ja
+  favicon: images/Icon128.png
+  logo: images/vls_w.svg
+  features:
+    - navigation.instant
+    - navigation.tracking    
+    - navigation.sections
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - search.share
+    - header.autohide
+    
+extra:
+  # alternate:
+  #   - name: English
+  #     link: /VistaSplatPro-Manual/en/ 
+  #     lang: en
+  #   - name: 日本語
+  #     link: /VistaSplatPro-Manual/ja/
+  #     lang: ja
+  # analytics:
+  #   provider: google
+  #   property: UA-XXXXXXXX-XX
+  social:
+    - icon: material/home
+      link: https://vls.co.jp/
+    - icon: material/store
+      link: https://vls.booth.pm/
+    - icon: fontawesome/brands/youtube 
+      link: https://www.youtube.com/channel/UCNH-Ipb9fgR5-OkAcTrblQg
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true 
+  - pymdownx.details
+  - footnotes
+  - pymdownx.tilde
+  
+nav:
+  - index.md
+  - system-requirement.md
+  - install.md
+  - how-to-basic.md
+  - how-to-advanced.md
+  # - faq.md
+  - changelog.md
