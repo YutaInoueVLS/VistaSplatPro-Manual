@@ -252,9 +252,40 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Vista Splat Proって何？
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="." class="md-nav__link md-nav__link--active">
         Vista Splat Proって何？
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    特徴
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -354,11 +385,17 @@
 <p><a href="https://vls.co.jp/vistasplatpro.html">Vista Splat Pro</a>は、<a href="https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/">3D Gaussian Splatting</a>のデータをUnreal Engineでリアルタイム描画するためのプラグインです。</p>
 <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/xxxxxxxxxxxxx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
 
+<h2 id="_1">特徴</h2>
 <ul>
-<li>このプラグインは、Unreal Engineのレンダリングパイプラインに独自の描画パスをエンジン改造無しで追加することで、3D Gaussian Splatting本来の描画手法に基づいた正確な描画を行います。</li>
 <li>3D Gaussian Splattingのモデルに、Unreal Engine内の他のオブジェクトから動的な影を落とすことができます。</li>
-<li>複数のモデルを配置可能です。</li>
+<li>3D Gaussian Splattingのモデルから、自信を含むUnreal Engine内の他のオブジェクトに動的な影を落とすことができます。</li>
+<li>複数の3D Gaussian Splattingのモデルを配置可能です。</li>
 </ul>
+<div class="admonition warning">
+<p class="admonition-title">エディタ上でのみ動作します</p>
+<p>本製品は映像製作での利用を意図しており、エディタ上でのみ動作する形で作られています。<br />
+EXE形式にビルドしたパッケージでは動作しません。</p>
+</div>
 
 
 

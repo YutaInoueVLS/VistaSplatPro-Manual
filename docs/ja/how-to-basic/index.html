@@ -342,6 +342,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    描画の調整
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -417,6 +424,39 @@
 <li>詳細パネルのコンポーネントツリーで「Crop Volume」コンポーネントを選択します。</li>
 <li>ビューポートまたは詳細パネルで、コンポーネントの位置、向き、サイズを変更します。</li>
 </ol>
+<h2 id="_5">描画の調整</h2>
+<p><img alt="" loading="lazy" src="../images/how-to-material.png" />  </p>
+<ul>
+<li><strong>Material Override</strong>: 独自に修正したマテリアルを使用する場合はここにセットします。</li>
+<li><strong>Spherical Harmonics</strong>: 色の描画方法を選択します。  <ul>
+<li>「Degree 0」は見る角度による色の変化を無効にします（反射などがなくなります）。</li>
+<li>「Degree 3」は見る角度による色の変化を有効にします。</li>
+</ul>
+</li>
+<li>
+<p><strong>Cast Shadow</strong>: 影の描画方法を選択します。  </p>
+<ul>
+<li>「DoNotCastShadow」にすると、このモデルから影を落とさなくなります。</li>
+<li>「CastShadow」にすると、このモデルから影を落とすようになります。</li>
+<li>
+<p>「CastDetheredShadow」にすると、ディザを使用したより高品質な影を落とすようになります。  </p>
+<div class="admonition warning">
+<p class="admonition-title">Dethered Shadow は Virtual Shadow Map 不可</p>
+<p>Virtual Shadow Mapが有効な場合、「CastDetheredShadow」にするとシャドウマップの更新が適切に行われず影が時間的に不安定になります。<br />
+Virtual Shadow Mapを使用する場合は、「CastShadow」に設定してください。</p>
+</div>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Mask Size</strong>: 個々のガウシアンを描画するスプライトのサイズ倍率を指定します。<br />
+    大きくするとガウス分布の端まで正しく描画されます。影を受ける範囲も広がるため、大きくしすぎると受け取った影の見た目がおかしくなります。</p>
+</li>
+<li><strong>Shadow Size</strong>: 影を落とす際の個々のガウシアンのサイズ倍率を指定します。<br />
+    大きくするとガウス分布の端まで考慮した影を落とすようになります。Mask Sizeの半分～2/3程度がおすすめです。</li>
+<li><strong>Specular</strong>: このモデル全体で使用するスぺキュラの値を指定します。</li>
+<li><strong>Normal</strong>: このモデル全体で使用する世界座標系での法線の値を指定します。</li>
+</ul>
 
 
 
