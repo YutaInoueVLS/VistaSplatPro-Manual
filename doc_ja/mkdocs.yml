@@ -2,8 +2,7 @@ site_name: Vista Splat Proマニュアル
 site_url: https://VIRTUAL-LINE-STUDIOS.github.io/VistaSplatPro-Manual/
 site_author: VIRTUAL LINE STUDIOS Corporation
 site_description: Official documentation of Vista Splat Pro for Unreal Engine.
-copyright: Copyright &copy; 2023 Akiya Research Institute, Inc. All Rights Reserved
-
+copyright: Copyright &copy; VIRTUAL LINE STUDIOS Corporation All Rights Reserved 
 site_dir: ../docs/ja
 
 extra_css:
@@ -84,6 +83,7 @@ nav:
   - system-requirement.md
   - install.md
   - how-to-basic.md
+  - how-to-composure.md
   - how-to-advanced.md
   # - faq.md
   - changelog.md

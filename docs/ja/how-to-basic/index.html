@@ -365,6 +365,21 @@
   
   
     <li class="md-nav__item">
+      <a href="../how-to-composure/" class="md-nav__link">
+        Composureでの使い方
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../how-to-advanced/" class="md-nav__link">
         高度な使い方
       </a>
@@ -436,10 +451,11 @@
 <li>
 <p><strong>Cast Shadow</strong>: 影の描画方法を選択します。  </p>
 <ul>
-<li>「DoNotCastShadow」にすると、このモデルから影を落とさなくなります。</li>
-<li>「CastShadow」にすると、このモデルから影を落とすようになります。</li>
+<li>「Masked Lit DoNotCastShadow」にすると、このモデルから影を落とさなくなります。</li>
+<li>「Masked Lit CastShadow」にすると、このモデルから影を落とすようになります。</li>
+<li>「Masked Lit CastDetheredShadow」にすると、ディザを使用したより高品質な影を落とすようになります。  </li>
 <li>
-<p>「CastDetheredShadow」にすると、ディザを使用したより高品質な影を落とすようになります。  </p>
+<p>「Translucent Unlit NoShadow」にすると、影を落とさず、影を受けず、ライトも受けない半透明マテリアルとして描画します。元来の3D Gaussian Splattingの描画に最も近い描画方式です。  </p>
 <div class="admonition warning">
 <p class="admonition-title">Dethered Shadow は Virtual Shadow Map 不可</p>
 <p>Virtual Shadow Mapが有効な場合、「CastDetheredShadow」にするとシャドウマップの更新が適切に行われず影が時間的に不安定になります。<br />
@@ -456,6 +472,7 @@ Virtual Shadow Mapを使用する場合は、「CastShadow」に設定してく�
     大きくするとガウス分布の端まで考慮した影を落とすようになります。Mask Sizeの半分～2/3程度がおすすめです。</li>
 <li><strong>Specular</strong>: このモデル全体で使用するスぺキュラの値を指定します。</li>
 <li><strong>Normal</strong>: このモデル全体で使用する世界座標系での法線の値を指定します。</li>
+<li><strong>Dither Random</strong>: ディザマスクのランダムノイズの強度。半透明部分の端に現れる縞模様が気に入らない場合はこの値を大きくしてください。</li>
 </ul>
 
 
@@ -493,13 +510,13 @@ Virtual Shadow Mapを使用する場合は、「CastShadow」に設定してく�
       
       
         
-        <a href="../how-to-advanced/" class="md-footer__link md-footer__link--next" aria-label="次: 高度な使い方" rel="next">
+        <a href="../how-to-composure/" class="md-footer__link md-footer__link--next" aria-label="次: Composureでの使い方" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 次
               </span>
-              高度な使い方
+              Composureでの使い方
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -514,7 +531,7 @@ Virtual Shadow Mapを使用する場合は、「CastShadow」に設定してく�
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2023 Akiya Research Institute, Inc. All Rights Reserved
+      Copyright &copy; VIRTUAL LINE STUDIOS Corporation All Rights Reserved
     </div>
   
   

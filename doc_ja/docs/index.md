@@ -7,7 +7,7 @@
 ## 特徴
 
 - 3D Gaussian Splattingのモデルに、Unreal Engine内の他のオブジェクトから動的な影を落とすことができます。
-- 3D Gaussian Splattingのモデルから、自信を含むUnreal Engine内の他のオブジェクトに動的な影を落とすことができます。
+- 3D Gaussian Splattingのモデルから、自信を含むUnreal Engine内のオブジェクトに動的な影を落とすことができます。
 - 複数の3D Gaussian Splattingのモデルを配置可能です。
 
 !!! Warning "エディタ上でのみ動作します"

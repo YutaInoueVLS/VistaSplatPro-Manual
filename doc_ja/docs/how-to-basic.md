@@ -34,9 +34,10 @@
 	- 「Degree 0」は見る角度による色の変化を無効にします（反射などがなくなります）。
 	- 「Degree 3」は見る角度による色の変化を有効にします。
 - **Cast Shadow**: 影の描画方法を選択します。  
-	- 「DoNotCastShadow」にすると、このモデルから影を落とさなくなります。
-	- 「CastShadow」にすると、このモデルから影を落とすようになります。
-	- 「CastDetheredShadow」にすると、ディザを使用したより高品質な影を落とすようになります。  
+	- 「Masked Lit DoNotCastShadow」にすると、このモデルから影を落とさなくなります。
+	- 「Masked Lit CastShadow」にすると、このモデルから影を落とすようになります。
+	- 「Masked Lit CastDetheredShadow」にすると、ディザを使用したより高品質な影を落とすようになります。  
+	- 「Translucent Unlit NoShadow」にすると、影を落とさず、影を受けず、ライトも受けない半透明マテリアルとして描画します。元来の3D Gaussian Splattingの描画に最も近い描画方式です。  
 
 		!!! Warning "Dethered Shadow は Virtual Shadow Map 不可"
 			Virtual Shadow Mapが有効な場合、「CastDetheredShadow」にするとシャドウマップの更新が適切に行われず影が時間的に不安定になります。  
@@ -48,3 +49,4 @@
 	大きくするとガウス分布の端まで考慮した影を落とすようになります。Mask Sizeの半分～2/3程度がおすすめです。
 - **Specular**: このモデル全体で使用するスぺキュラの値を指定します。
 - **Normal**: このモデル全体で使用する世界座標系での法線の値を指定します。
+- **Dither Random**: ディザマスクのランダムノイズの強度。半透明部分の端に現れる縞模様が気に入らない場合はこの値を大きくしてください。

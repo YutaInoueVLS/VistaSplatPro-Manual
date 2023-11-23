@@ -20,11 +20,13 @@
 
 3D Gaussian Splattingの描画時、画面上のガウシアン（点）を奥行き方向にソートする処理があります。  
 この際のソート対象を一時的に保持するメモリ領域のサイズを変更できます。  
-デフォルトでは2048 x 2048です。この値を増やすことで、画面上に同時により多くのガウシアンを描画できるようになります。  
+デフォルトでは4096 x 4096です。この値を増やすことで、画面上に同時により多くのガウシアン（点）を描画できるようになります。  
 データ量の多いモデルで、モデルの一部が欠けて表示されてしまう場合はこの値を増やしてください。
 
 1. 「(プロジェクトフォルダ)\Plugins\VistaSplatPro\Source\VistaSplatProRenderer\VistaSplatProRenderer.build.cs」を開きます
-2.  14行目の「PublicDefinitions.Add("SORTED_TEXTURE_WIDHT=2048");」の「2048」を任意の値（例えば「4096」）に変更します
+2.  14行目の「PublicDefinitions.Add("SORTED_TEXTURE_WIDHT=4096");」の「4096」を任意の値（例えば「4096」）に変更します
 3. 「(プロジェクトフォルダ)\Plugins\VistaSplatPro\Shaders\Private\VistaSplatProCommon.usf」を開きます
-4.  7行目の「#define SORTED_TEXTURE_WIDHT 2048」の「2048」を上記と同じ値（例えば「4096」）に変更します
+4.  7行目の「#define SORTED_TEXTURE_WIDHT 4096」の「4096」を上記と同じ値（例えば「4096」）に変更します
 5. ファイルを保存し、プロジェクトを開きなおします。
+
+また、同様の操作でより小さい値を指定することで、GPUメモリの消費を節約することもできます。
