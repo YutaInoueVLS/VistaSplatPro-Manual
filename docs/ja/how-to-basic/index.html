@@ -451,16 +451,10 @@
 <li>
 <p><strong>Cast Shadow</strong>: 影の描画方法を選択します。  </p>
 <ul>
+<li>「Masked Unlit NoShadow」にすると、このモデルから影を落とさず、また、影やライトを受けなくなりす。</li>
 <li>「Masked Lit DoNotCastShadow」にすると、このモデルから影を落とさなくなります。</li>
 <li>「Masked Lit CastShadow」にすると、このモデルから影を落とすようになります。</li>
-<li>
-<p>「Masked Lit CastDetheredShadow」にすると、ディザを使用したより高品質な影を落とすようになります。  </p>
-<div class="admonition warning">
-<p class="admonition-title">Dethered Shadow は Virtual Shadow Map 不可</p>
-<p>Virtual Shadow Mapが有効な場合、「CastDetheredShadow」にするとシャドウマップの更新が適切に行われず影が時間的に不安定になります。<br />
-Virtual Shadow Mapを使用する場合は、「CastShadow」に設定してください。</p>
-</div>
-</li>
+<li>「Masked Lit CastDetheredShadow」にすると、ディザを使用したより高品質な影を落とすようになります。  </li>
 <li>
 <p>「Translucent Unlit NoShadow」にすると、影を落とさず、影を受けず、ライトも受けない半透明マテリアルとして描画します。元来の3D Gaussian Splattingの描画に最も近い描画方式です。  </p>
 <div class="admonition warning">
@@ -472,29 +466,11 @@ TSRやTAAやMotion Blurを使用する場合は、「Masked」のいずれかに
 </ul>
 </li>
 <li>
-<p><strong>Mask Size</strong>: 個々のガウシアンを描画するスプライトのサイズ倍率を指定します。<br />
-    大きくするとガウス分布の端まで正しく描画されます。影を受ける範囲も広がるため、大きくしすぎると受け取った影の見た目がおかしくなります。</p>
+<p><strong>Mask Alpha Boost</strong>: 個々のガウス分布を描画するマスクの透明度を調整します。主に、光や影を受ける範囲の調整に使用します。</p>
 </li>
-<li><strong>Mask Alpha Boost</strong>: 個々のガウシアンを描画する透明度を調整します。  </li>
-<li><strong>Shadow Size</strong>: 影を落とす際の個々のガウシアンのサイズ倍率を指定します。<br />
-    大きくするとガウス分布の端まで考慮した影を落とすようになります。Mask Sizeの半分～2/3程度がおすすめです。</li>
-<li>
-<p><strong>Shadow Alpha Boost</strong>: 影を描画するときの個々のガウシアンの透明度を調整します。特にDethered Shadowを使う場合に違いが現れます。  </p>
-<div class="admonition question">
-<p class="admonition-title">Mask SizeとMask Alpha Boostの関係</p>
-<p>ガウス分布 α * exp( -0.5 * x^2 / σ^2) に対して、</p>
-<ul>
-<li>Mask Sizeは、σに掛け算されます</li>
-<li>Mask Alpha Boostは、αに掛け算されます</li>
-</ul>
-<p>Shadow SizeとShadow Alpha Boostも同様です。</p>
-</div>
-</li>
-<li>
-<p><strong>Specular</strong>: このモデル全体で使用するスぺキュラの値を指定します。</p>
-</li>
-<li><strong>Normal</strong>: このモデル全体で使用する世界座標系での法線の値を指定します。</li>
-<li><strong>Dither Random</strong>: ディザマスクのランダムノイズの強度。半透明部分の端に現れる縞模様が気に入らない場合はこの値を大きくしてください。</li>
+<li><strong>Mask Dither Random</strong>: 個々のガウス分布を描画するマスクのノイズ強度を調整します。主に、光や影を受ける範囲の調整に使用します。</li>
+<li><strong>Specular</strong>: このモデル全体で使用するスぺキュラの値を指定します。</li>
+<li><strong>World Normal</strong>: このモデル全体で使用する世界座標系での法線の値を指定します。</li>
 </ul>
 
 
